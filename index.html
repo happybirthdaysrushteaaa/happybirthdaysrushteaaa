@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Srushteaaa❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="birthday-locked">
+  <!-- =========================
+       BIRTHDAY COUNTDOWN LOCK
+       ========================= -->
+  <section id="birthdayLock" class="birthday-lock">
+
+    <div class="countdown-card">
+
+      <div class="lock-flower">🌸</div>
+
+      <p class="lock-eyebrow">
+        A little surprise is waiting...
+      </p>
+
+      <h1>Not yet ❤️</h1>
+
+      <p class="lock-message">
+        This little world I've made for you will open
+        when your birthday begins.
+      </p>
+
+      <div class="countdown">
+
+        <div>
+          <span id="days">00</span>
+          <small>Days</small>
+        </div>
+
+        <div>
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
+
+        <div>
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
+
+        <div>
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
+
+      </div>
+
+      <p class="lock-bottom">
+        Come back when the clock strikes midnight. ❤️
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- YOUR EXISTING WEBSITE -->
+
+  <div class="petals" id="petals"></div>
+
+  <!-- INTRO / SECRET SCREEN -->
+  <section class="screen intro active" id="intro">
+
+    <div class="glass intro-card">
+
+      <p class="eyebrow">A little surprise for you</p>
+
+      <h1>
+        I made something<br>
+        <span>just for you.</span>
+      </h1>
+
+      <p class="muted">
+        There is a tiny secret before you can enter.
+      </p>
+
+      <div class="code-box">
+
+        <input
+          id="secretInput"
+          maxlength="8"
+          placeholder="Enter secret code"
+          autocomplete="off"
+        >
+
+        <button onclick="unlock()">
+          Open ❤️
+        </button>
+
+      </div>
+
+      <p class="hint" id="hint">
+        Hint: your special date 😉
+      </p>
+
+    </div>
+
+  </section>
+
+  
+  <div class="petals" id="petals"></div>
+
+
+  <!-- =========================
+       MAIN WEBSITE
+       ========================= -->
+  <main id="main" class="hidden">
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">12 • OCTOBER • YOUR SPECIAL DAY</p>
+        <h1>Happy Birthday,<br><span id="herNameHero">Srushteaaa</span> ❤️</h1>
+        <p class="hero-subtitle" id="heroLine">Today is a little more beautiful because you were born.</p>
+        <button class="scroll-btn" onclick="scrollToId('story')">Begin our little story ↓</button>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="section-heading">
+        <p class="eyebrow">OUR STORY</p>
+        <h2>Some moments are worth keeping forever.</h2>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading">
+        <p class="eyebrow">OUR MEMORIES</p>
+        <h2>A few pieces of us.</h2>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="section reasons-section">
+      <div class="section-heading">
+        <p class="eyebrow">A LITTLE SECRET</p>
+        <h2>Things I love about you.</h2>
+      </div>
+
+      <div class="reason-card glass">
+        <div class="reason-number" id="reasonNumber">01</div>
+        <p id="reasonText">Your smile.</p>
+        <button onclick="nextReason()">Another one →</button>
+      </div>
+    </section>
+
+    <section class="section letter-section">
+      <div class="section-heading">
+        <p class="eyebrow">FOR YOU</p>
+        <h2>There is a letter inside.</h2>
+      </div>
+
+      <div class="envelope-wrap" onclick="openLetter()">
+        <div class="envelope" id="envelope">
+          <div class="letter">
+            <p class="letter-title">To <span id="herNameLetter">Her Name</span>,</p>
+            <p id="letterText">Write your birthday letter here...</p>
+            <p class="signature">With all my love,<br><span id="yourNameLetter">Your Name</span> ❤️</p>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+        </div>
+        <p class="tap-note">Tap the envelope to open it 💌</p>
+      </div>
+    </section>
+
+    <section class="section final-section">
+      <div class="final-card">
+        <div class="cake">🎂</div>
+        <p class="eyebrow">ONE LAST THING</p>
+        <h2>Here's to another beautiful year of you.</h2>
+        <p id="finalMessage">May your days be full of laughter, love, peace and everything your heart wishes for.</p>
+        <button onclick="celebrate()">Make a wish ✨</button>
+      </div>
+    </section>
+
+    <footer>
+      Made with love ❤️
+    </footer>
+  </main>
+
+  <audio id="music" loop>
+    <source src="assets/birthday-song.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">♫</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
